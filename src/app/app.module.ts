@@ -7,11 +7,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from "@angular/forms";
 import { FlightListComponent } from './flight-list/flight-list.component';
+import { FlightCreateComponent } from './flight-create/flight-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FlightListComponent,
+    FlightCreateComponent,
   ],
   imports: [
     BrowserModule,

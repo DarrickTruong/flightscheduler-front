@@ -15,6 +15,11 @@ export class FlightService {
     return this.http.get(this.endpoint);
   }
 
+  // Post - Add a flight
+  flightCreate(flight:Flight): Observable<object> {
+    return this.http.post(this.endpoint, flight)
+  }
+
 
 
 }
