@@ -11,6 +11,11 @@ export class FlightService {
   private endpoint = 'http://localhost:8000/flights/'
   constructor(private http:HttpClient) { }
 
+  // get single flight
+  getFlight(id:number): Observable<any> {
+    return this.http.get(this.endpoint + id)
+  }
+ 
   getAllFlights(): Observable<any> {
     return this.http.get(this.endpoint);
   }
@@ -20,6 +25,9 @@ export class FlightService {
     return this.http.post(this.endpoint, flight)
   }
 
-
+  // Put - Edit Flight
+  editFlight(id:number, payload: any): Observable<object>{
+    return this.http.put(this.endpoint + id, payload)
+  }
 
 }
