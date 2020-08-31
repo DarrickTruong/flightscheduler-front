@@ -30,4 +30,13 @@ export class FlightService {
     return this.http.put(this.endpoint + id, payload)
   }
 
+  // Delete Flight
+  deleteFlight(id:number):Observable<any> {
+    return this.http.delete(this.endpoint + id)
+  }
+
+  deleteAllFlights(): Observable<any> {
+    return this.http.delete(this.endpoint)
+  }
+
 }

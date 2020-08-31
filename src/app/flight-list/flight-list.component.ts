@@ -9,7 +9,7 @@ import { FlightService } from "../services/flight.service";
   styleUrls: ['./flight-list.component.css']
 })
 export class FlightListComponent implements OnInit {
-
+  success: boolean = false;
   flights:Observable<Flight[]>;
 
   constructor(private flightService:FlightService) { }
@@ -23,11 +23,24 @@ export class FlightListComponent implements OnInit {
   }
 
   deleteFlight(id) {
-
+    this.flightService.deleteFlight(id)
+      .subscribe(
+        data => {
+          this.success = true;
+          this.loadflightsData();
+        }, error => console.log("Failed to delete" + error)
+        
+      )
   }
 
   deleteAllFlights() {
-
+    this.flightService.deleteAllFlights()
+      .subscribe(
+        data => {
+          this.success = true;
+          this.loadflightsData();
+        }, error => console.log("Failed to delete" + error)
+      )
   }
 
     

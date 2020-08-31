@@ -10,6 +10,7 @@ import { FlightListComponent } from './flight-list/flight-list.component';
 import { FlightCreateComponent } from './flight-create/flight-create.component';
 import { FlightEditComponent } from './flight-edit/flight-edit.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
