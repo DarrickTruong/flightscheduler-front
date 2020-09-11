@@ -27,7 +27,7 @@ export class FlightCreateComponent implements OnInit {
       .subscribe(
         data => {
           this.success = true;
-          console.log("new flight added!")
+          console.log("new flight added!");
         },
         error => console.log("sorry, Cannot Save!" + error)
       )
