@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Flight } from "../models/flights";
 import { FlightService } from "../services/flight.service";
+import { Router, ActivatedRoute, ParamMap } from "@angular/router";
+
 
 @Component({
   selector: 'app-flight-create',
